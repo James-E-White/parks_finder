@@ -1,0 +1,17 @@
+<%=@parks.count %>
+<% @parks.each do |park| %>
+<p><%= park.name %></p>
+<p><%= park.description %></p>
+<p><%= park.directions %></p>
+          <p>Hours of Operation</p>
+          <ul>
+            <li>Monday: <%= park.hours[:monday] %></li>
+            <li>Tuesday: <%= park.hours[:tuesday] %></li>
+            <li>Wednesday: <%= park.hours[:wednesday] %></li>
+            <li>Thursday: <%= park.hours[:thursday] %></li>
+            <li>Friday: <%= park.hours[:friday] %></li>
+            <li>Saturday: <%= park.hours[:saturday] %></li>
+            <li>Sunday: <%= park.hours[:sunday] %></li>
+          </ul>
+        </li>
+<% end %>
